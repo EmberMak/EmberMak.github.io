@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kei Cheong Mai · Light in the Dark</title>
+<meta name="description" content="Kei Cheong Mai: game and web developer building Bright Spirit, night and automotive photographer, iaido 1st Dan. Singapore.">
+<meta property="og:title" content="Kei Cheong Mai · Light in the Dark"><meta property="og:image" content="img/portrait-main.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Shippori+Mincho:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<canvas id="fx"></canvas>
+<div id="cursor"><span class="dot"></span><span class="ring"></span></div>
+<div id="progress"><span></span><i id="flame"></i></div>
+<nav id="nav"><a href="#top" class="logo">K<span>·</span>C</a>
+ <ol><li><a href="#ch1">Origin</a></li><li><a href="#iaido">Iaido</a></li><li><a href="#ch2">Forge</a></li><li><a href="#ch3">Build</a></li><li><a href="#ch4">Lens</a></li><li><a href="#ch5">Path</a></li><li><a href="#contact">Contact</a></li></ol></nav>
+
+<header id="top" class="hero">
+ <div class="rain" aria-hidden="true"></div>
+ <div class="hero-bg" style="background-image:url(img/photo-gtr-tokyo-tower.jpg)"></div>
+ <div class="hero-inner">
+  <img class="portrait" src="img/portrait-main.jpg" alt="Kei Cheong Mai behind his camera">
+  <p class="kicker pixel">Prologue · Singapore</p>
+  <h1 class="glitch" data-text="KEI CHEONG MAI">KEI CHEONG MAI</h1>
+  <p class="kanji" aria-hidden="true">一刀 · 光</p>
+  <p class="lead">I turn ideas into things people can <b class="swap" data-words="play,use,feel">play</b>.<br>Game &amp; web developer, building Bright Spirit for Google Play.</p>
+  <div class="cta"><a class="btn mag" href="#ch2">Enter the story</a><a class="btn ghost mag" href="#contact">Hire me</a></div>
+ </div>
+ <p class="hint">Click anywhere to draw your blade · scroll to begin</p>
+</header>
+
+<section id="ch1" class="chapter">
+ <div class="chap-head reveal"><span class="pixel">Chapter I</span><h2>Origin</h2><p>Every spirit starts as a spark.</p></div>
+ <div class="split">
+  <div class="reveal"><p class="big">Before code, there was <em>people</em>.</p>
+   <p>As <b>Student Council President</b> at Nan Hua High School I learned that the best ideas die without execution and clear communication. At the Student Leadership Convention 2023 at Hwa Chong Institution, my group took home trophies at the Youth Assembly on Art and Technology.</p>
+   <p>On the dojo floor, <b>iaido</b> taught me the rest: one clean, deliberate cut beats a hundred hesitant ones. I hold my <b>1st Dan (Shodan)</b>.</p></div>
+  <div class="stat-grid reveal">
+   <div class="stat tilt"><b data-count="1">0</b><span>Dan in iaido</span></div>
+   <div class="stat tilt"><b>Pres.</b><span>Student Council, 2023–24</span></div>
+   <div class="stat tilt"><b data-count="6">0</b><span>Certifications in 2026</span></div>
+   <div class="stat tilt"><b>∞</b><span>Curiosity</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="iaido" class="chapter iaido">
+ <div class="chap-head reveal"><span class="pixel">Interlude</span><h2>The Way of the Sword</h2><p>Iaido · 1st Dan (Shodan) · Kanagawa Kendo Federation · 4 Oct 2026</p></div>
+ <div class="iaido-grid">
+  <figure class="reveal tall"><img src="img/iaido-with-katana.jpg" alt="Kei Cheong with his katana" loading="lazy"></figure>
+  <div class="reveal iaido-text"><p class="big">One draw. One cut. <em>No wasted motion.</em></p>
+   <p>Iaido is the art of drawing the sword and cutting in a single movement. Every kata is practised thousands of times until nothing is left but intent and precision.</p>
+   <p>I write code the same way: understand the problem, remove what isn't needed, then make one clean, deliberate change, and test it until it holds.</p>
+   <figure class="wide"><img src="img/iaido-grading-dojo.jpg" alt="Iaido grading in the dojo" loading="lazy"><figcaption>Grading day</figcaption></figure></div>
+  <figure class="reveal tall"><img src="img/iaido-shodan-certificate.jpg" alt="Iaido Shodan certificate" loading="lazy"><figcaption>Shodan certificate</figcaption></figure>
+ </div>
+</section>
+
+<section id="ch2" class="chapter forge">
+ <div class="chap-head reveal"><span class="pixel">Chapter II</span><h2>The Forge · <span class="bs">Bright Spirit</span></h2><p>An open-world, top-down, 2D pixel-art soulslike. Built solo.</p></div>
+ <div class="showcase reveal"><img src="img/game-title.jpg" alt="Bright Spirit title screen" loading="lazy"><div class="scan"></div></div>
+ <div class="stat-grid wide reveal">
+  <div class="stat tilt"><b data-count="12">0</b><span>Regions</span></div>
+  <div class="stat tilt"><b data-count="11">0</b><span>Multi-phase bosses</span></div>
+  <div class="stat tilt"><b data-count="64">0</b><span>Weapons</span></div>
+  <div class="stat tilt"><b data-count="1000">0</b><span>Automated tests</span></div>
+  <div class="stat tilt"><b>&lt;<span data-count="6">0</span>MB</b><span>Total build</span></div>
+  <div class="stat tilt"><b data-count="10">0</b><span>Demo builds</span></div>
+ </div>
+ <div class="tabs reveal">
+  <div class="tab-btns"><button class="on" data-t="t1">Stack</button><button data-t="t2">Challenges</button><button data-t="t3">Next</button></div>
+  <div id="t1" class="tab on"><p><b>TypeScript · PixiJS 8 · Vite</b>, shipped as an Android WebView APK and an Electron PC build. Procedural pixel art and runtime-synthesised audio keep it under 6 MB. Affix loot, quests, cutscenes, mounts and elemental combat, with a content editor and validation pipeline behind it.</p></div>
+  <div id="t2" class="tab"><ul><li><b>Mobile readability</b>: reworked UI for small landscape screens.</li><li><b>Low-end performance</b>: chunk caching, particle budgets and baked shading.</li><li><b>Economy rebalance</b>: cut final-boss grind from 9.5 levels to 2–4 per boss.</li><li><b>Narrative</b>: restructured the story and added DLC hooks.</li></ul></div>
+  <div id="t3" class="tab"><p>Google Play closed testing, then a sequel. <span class="pixel small">Loading…</span></p></div>
+ </div>
+ <div class="filmstrip reveal">
+  <img src="img/game-gameplay.jpg" alt="Bright Spirit gameplay" loading="lazy">
+  <img src="img/v3after-land-combat.jpg" alt="Combat" loading="lazy">
+  <img src="img/v3after-land-walls.jpg" alt="Level walls" loading="lazy">
+  <img src="img/v3after-land-hud.jpg" alt="In-game HUD" loading="lazy">
+  <img src="img/v2after-desktop-walls.jpg" alt="Desktop build" loading="lazy">
+ </div>
+</section>
+
+<section id="ch3" class="chapter">
+ <div class="chap-head reveal"><span class="pixel">Chapter III</span><h2>Building &amp; Business</h2><p>Secure, practical systems, and the strategy behind them.</p></div>
+ <div class="cards">
+  <article class="card tilt reveal"><span class="tag">Kuai Da Trade · 2026</span><h3>IT Manager (Intern)</h3><p>Added <b>CSRF protection</b> to the reporting system and set up data back-ups.</p><div class="chips"><i>Security</i><i>IT ops</i></div></article>
+  <article class="card tilt reveal"><span class="tag">VTSP · Harvard undergrad ventures · 2026</span><h3>Venture &amp; Tech Summer Program</h3><p>AI investment predictors, company simulations, and a competitor-strategy project for Rove where I fixed cross-timezone team comms.</p><div class="chips"><i>Strategy</i><i>AI</i><i>Teamwork</i></div></article>
+ </div>
+</section>
+
+<section id="ch4" class="chapter lens">
+ <div class="chap-head reveal"><span class="pixel">Chapter IV</span><h2>The Lens</h2><p>Light in the dark, on a Canon EOS R3.</p></div>
+ <div class="masonry">
+  <figure class="reveal"><img src="img/photo-gtr-tokyo-tower.jpg" alt="GT-R by Tokyo Tower in the rain" loading="lazy"><figcaption>Tokyo Tower, rain</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-lanterns.jpg" alt="Lantern wall under cherry blossoms" loading="lazy"><figcaption>Lanterns &amp; sakura</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-ginza5.jpg" alt="Ginza 5 at night" loading="lazy"><figcaption>Ginza 5</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-gtr-rain.jpg" alt="GT-R low angle in rain" loading="lazy"><figcaption>Kerbside</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-tokyo-crossing.jpg" alt="Tokyo crossing" loading="lazy"><figcaption>Crossing</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-rainy-headlights.jpg" alt="Rainy headlights" loading="lazy"><figcaption>Headlights</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-expressway.jpg" alt="Expressway" loading="lazy"><figcaption>Expressway</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-orange-balcony.jpg" alt="Orange balcony" loading="lazy"><figcaption>Balcony</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-lakeside-dining.jpg" alt="Lakeside dining" loading="lazy"><figcaption>Lakeside</figcaption></figure>
+  <figure class="reveal"><img src="img/photo-beach.jpg" alt="Beach" loading="lazy"><figcaption>Shoreline</figcaption></figure>
+ </div>
+ <p class="book reveal">Car &amp; night street shoots in Singapore from <b>S$120/hr</b>, with 20 edited photos. <a href="#contact">Message me to book</a>.</p>
+</section>
+
+<section id="ch5" class="chapter">
+ <div class="chap-head reveal"><span class="pixel">Chapter V</span><h2>The Path</h2><p>Each step, one clean cut.</p></div>
+ <ol class="timeline">
+  <li class="reveal"><time>2023</time><b>Student Council President</b>, Nan Hua High School · SLC 2023 trophies</li>
+  <li class="reveal"><time>2024</time><b>Freelance Photographer</b> begins</li>
+  <li class="reveal"><time>Mar 2026</time><b>IT Manager (Intern)</b>, Kuai Da Trade</li>
+  <li class="reveal"><time>May 2026</time><b>Bright Spirit</b> development starts · VTSP begins</li>
+  <li class="reveal"><time>4 Oct 2026</time><b>Iaido 1st Dan (Shodan)</b>, Kanagawa Kendo Federation</li>
+  <li class="reveal"><time>Jun–Sep 2026</time>Certifications: AI Singapore (Foundations &amp; Literacy in AI), Alison Diploma in Digital Photography, Oxford Home Study HR &amp; AI, Anthropic AI Fluency, VTSP</li>
+  <li class="reveal next"><time>Next</time><b>Google Play</b> closed testing</li>
+ </ol>
+ <div class="skills reveal">
+  <i>TypeScript</i><i>PixiJS</i><i>Vite</i><i>Electron</i><i>Android</i><i>Web design</i><i>Web security</i><i>Testing</i><i>IT ops</i><i>Photography</i><i>Project planning</i><i>Market research</i><i>Leadership</i><i>AI fluency</i>
+ </div>
+</section>
+
+<section id="contact" class="chapter finale">
+ <div class="reveal"><span class="pixel">Epilogue</span><h2>Let's build something<br><span class="bs">bright</span>.</h2>
+ <p><a class="mail" href="mailto:maikeicheong@gmail.com">maikeicheong@gmail.com</a></p>
+ <p>Open to freelance game, web and photography work, and to full-time roles.</p>
+ <div class="cta"><a class="btn mag" href="mailto:maikeicheong@gmail.com?subject=Hi%20Kei%20Cheong">Email me</a><a class="btn ghost mag" href="https://www.linkedin.com/in/kei-cheong-mai-2151913a4" target="_blank" rel="noopener">LinkedIn</a></div></div>
+ <footer>© 2026 Kei Cheong Mai · Singapore · Hand-built, no templates</footer>
+</section>
+
+<button id="snd" aria-pressed="false" title="Toggle slash sound">🔇 Sound</button>
+<div id="lightbox"><img alt=""><p></p></div>
+<script src="main.js"></script>
+</body></html>
