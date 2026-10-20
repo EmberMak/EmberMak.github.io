@@ -115,3 +115,18 @@ footer{margin-top:120px;font-size:12px;color:#555b70}
 .iaido-grid{grid-template-columns:repeat(3,1fr)}
 .certs{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.cert h3{font-size:20px}.cert p{font-family:"Press Start 2P";font-size:10px;color:var(--gold)!important;margin-top:4px}
 @media(max-width:860px){.iaido-grid{grid-template-columns:1fr}}
+/* cert flip cards */
+.cert{padding:0;background:none;border:0;perspective:1000px;cursor:pointer;outline:none;min-height:230px}
+.cert .flip{position:relative;height:100%;min-height:230px;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.cert.flipped .flip{transform:rotateY(180deg)}
+.cert .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;border:1px solid #ffffff14;background:linear-gradient(160deg,#4de3ff0d,#ff4d6d08);padding:28px;display:flex;flex-direction:column;overflow:hidden}
+.cert .back{transform:rotateY(180deg);padding:10px;align-items:center;justify-content:center;background:#0b0b14;border-color:#4de3ff55}
+.cert:hover .face,.cert:focus-visible .face{border-color:var(--cyan)}
+.cert:focus-visible .face{box-shadow:0 0 0 2px var(--cyan)}
+.cert .back img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;cursor:zoom-in}
+.cert .soon{text-align:center;color:var(--dim)}.cert .soon .pixel{font-size:10px;color:var(--cyan)}.cert .soon p{font-family:"Shippori Mincho";font-size:18px;color:#c3c8d8!important;margin-top:10px}
+.cert .back .soon{border:1px dashed #ffffff22;border-radius:12px;padding:28px 18px;width:100%}
+.flip-hint{margin-top:auto;font-size:11px;color:var(--dim);letter-spacing:.5px}
+.cert.burst .face{animation:certglow .7s ease-out}
+@keyframes certglow{0%{box-shadow:0 0 0 0 #4de3ffaa,0 0 0 0 #ff4d6d88}60%{box-shadow:0 0 30px 8px #4de3ff55,0 0 60px 16px #ff4d6d33}100%{box-shadow:0 0 0 0 transparent}}
+@media(prefers-reduced-motion:reduce){.cert .flip{transition:none}.cert.burst .face{animation:none}}

@@ -33,8 +33,16 @@ $$('.tilt').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBound
 // magnetic
 $$('.mag').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});el.addEventListener('mouseleave',()=>el.style.transform='')});
 // word swap
-const sw=$('.swap'),words=sw.dataset.words.split(',');let wi=0;setInterval(()=>{wi=(wi+1)%words.length;sw.animate([{opacity:1},{opacity:0,transform:'translateY(-8px)'}],{duration:200}).onfinish=()=>{sw.textContent=words[wi];sw.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1}],{duration:250})}},2200);
+const sw=$('.swap');if(sw){const words=sw.dataset.words.split(',');let wi=0;setInterval(()=>{wi=(wi+1)%words.length;sw.animate([{opacity:1},{opacity:0,transform:'translateY(-8px)'}],{duration:200}).onfinish=()=>{sw.textContent=words[wi];sw.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1}],{duration:250})}},2200);}
 // tabs
 $$('.tab-btns button').forEach(b=>b.onclick=()=>{$$('.tab-btns button').forEach(x=>x.classList.toggle('on',x===b));$$('.tab').forEach(t=>t.classList.toggle('on',t.id===b.dataset.t))});
 // lightbox
 const lb=$('#lightbox');$$('.masonry figure,.filmstrip img,.iaido-grid figure').forEach(f=>f.addEventListener('click',()=>{const img=f.tagName==='IMG'?f:$('img',f);$('img',lb).src=img.src;$('p',lb).textContent=img.alt;lb.classList.add('on')}));lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+
+// cert flip cards
+function slashAt(x,y){if(reduce)return;const a=(-.35+Math.random()*.25)*Math.PI;slashes.push({x,y,a,L:120,t:0});for(let i=0;i<14;i++){const sa=Math.random()*Math.PI*2,v=2+Math.random()*5;sparks.push({x,y,vx:Math.cos(sa)*v,vy:Math.sin(sa)*v,l:1,c:Math.random()<.5?'#4de3ff':'#ffc46b'})}if(snd)swish()}
+$$('.cert[data-cert]').forEach(card=>{const back=$('.back',card),src=card.dataset.cert,title=$('h3',card).textContent;
+ const im=new Image();im.onload=()=>{back.innerHTML='';im.alt=title+' certificate';back.appendChild(im);im.addEventListener('click',e=>{if(!card.classList.contains('flipped'))return;e.stopPropagation();$('img',lb).src=im.src;$('p',lb).textContent=im.alt;lb.classList.add('on')})};im.src=src;
+ const flip=kb=>{const on=card.classList.toggle('flipped');card.setAttribute('aria-pressed',on);card.style.transform='';if(!reduce){card.classList.remove('burst');void card.offsetWidth;card.classList.add('burst')}if(kb){const r=card.getBoundingClientRect();slashAt(r.left+r.width/2,r.top+r.height/2)}};
+ card.addEventListener('click',()=>flip(false));
+ card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip(true)}})});
