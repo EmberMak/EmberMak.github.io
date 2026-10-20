@@ -1,0 +1,1 @@
+import{T as t,E as a}from"./Geometry-Dn9rJi87.js";class o extends t{constructor(e){super(e),this.uploadMethodId="image",this.autoGarbageCollect=!0}static test(e){return globalThis.HTMLImageElement&&e instanceof HTMLImageElement||typeof ImageBitmap<"u"&&e instanceof ImageBitmap||globalThis.VideoFrame&&e instanceof VideoFrame}}o.extension=a.TextureSource;export{o as I};
