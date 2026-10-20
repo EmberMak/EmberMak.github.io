@@ -112,3 +112,6 @@ footer{margin-top:120px;font-size:12px;color:#555b70}
 #snd{position:fixed;right:18px;bottom:18px;z-index:70;font:inherit;font-size:12px;padding:8px 14px;border-radius:20px;border:1px solid #ffffff2a;background:#07070dcc}
 @media (prefers-reduced-motion:reduce){.rain{display:none}}
 .mail{color:var(--gold);font-size:20px;text-decoration:none}
+.iaido-grid{grid-template-columns:repeat(3,1fr)}
+.certs{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.cert h3{font-size:20px}.cert p{font-family:"Press Start 2P";font-size:10px;color:var(--gold)!important;margin-top:4px}
+@media(max-width:860px){.iaido-grid{grid-template-columns:1fr}}
