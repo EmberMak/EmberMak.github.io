@@ -132,3 +132,32 @@ footer{margin-top:120px;font-size:12px;color:#555b70}
 @media(prefers-reduced-motion:reduce){.cert .flip{transition:none}.cert.burst .face{animation:none}}
 
 .games .game{display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:0 0 26px;overflow:hidden}.games .game img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-bottom:20px;border-bottom:1px solid #ffffff14}.games .game>*:not(img){margin-left:26px;margin-right:26px}.games .go{margin-top:auto;padding-top:14px;color:var(--cyan);font-weight:700;font-size:14px}.games .game:hover .go{color:var(--neon)}
+
+/* games v2 */
+.gstats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 26px}
+.gstats div{text-align:center;padding:16px 8px;border:1px solid #ffffff14;border-radius:14px;background:#ffffff05}
+.gstats b{display:block;font-family:"Press Start 2P";font-size:18px;color:var(--gold);margin-bottom:8px;text-shadow:0 0 14px #ffc46b55}.gstats span{font-size:12px;color:var(--dim)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font:700 12px Inter;padding:8px 16px;border-radius:20px;border:1px solid #ffffff2a;background:transparent;color:var(--dim);cursor:pointer;transition:.2s}
+.filters button:hover{color:var(--ink);border-color:var(--cyan)}.filters button.on{background:var(--neon);border-color:var(--neon);color:#07070d;box-shadow:0 0 18px #ff4d6d66}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.gcard{position:relative;display:flex;flex-direction:column;border-radius:18px;overflow:hidden;border:1px solid #ffffff14;background:linear-gradient(160deg,#4de3ff0d,#ff4d6d0a);transition:transform .15s,border-color .3s,box-shadow .3s,opacity .3s}
+.gcard:hover{border-color:var(--neon);box-shadow:0 0 0 1px #ff4d6d55,0 18px 50px -10px #ff4d6d55}
+.gcard.hide{display:none}
+.gcard .media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}
+.gcard .media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .6s;filter:saturate(.9)}
+.gcard:hover .media img{transform:scale(1.07);filter:saturate(1.2)}
+.gcard .media::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#07070dcc),repeating-linear-gradient(0deg,#ffffff06 0 1px,transparent 1px 3px);pointer-events:none}
+.badge{position:absolute;top:12px;z-index:2;font-family:"Press Start 2P";font-size:8px;letter-spacing:1px;padding:7px 9px;border-radius:6px;background:#07070dcc;backdrop-filter:blur(4px)}
+.badge.status{left:12px;color:#7dffb0;border:1px solid #7dffb066}.badge.size{right:12px;color:var(--gold);border:1px solid #ffc46b66}
+.wip .badge.status{color:var(--gold);border-color:#ffc46b66}
+.gcard .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(circle at 50% 60%,#ff4d6d33,transparent 60%),linear-gradient(135deg,#1a0b14,#07070d 60%,#0b1a22)}
+.gcard .ph .pixel{font-size:30px;color:var(--neon);text-shadow:0 0 20px var(--neon)}.gcard .ph b{font-size:13px;color:var(--dim);letter-spacing:3px;text-transform:uppercase}
+.gcard .body{display:flex;flex-direction:column;flex:1;padding:22px 24px 24px}
+.gcard h3{font-family:"Shippori Mincho";font-size:24px;margin:6px 0 10px}.gcard p{color:#c3c8d8;font-size:15px}
+.gcard .chips{margin-top:14px}.gcard .chips i:first-child{color:var(--cyan);border-color:#4de3ff55}
+.gbtns{display:flex;gap:10px;margin-top:auto;padding-top:20px}
+.btn.sm{padding:10px 18px;font-size:14px;flex:1;text-align:center}.btn.sm.ghost{flex:0 0 auto}
+.btn.off{background:#ffffff10;color:var(--dim);box-shadow:none;cursor:default}
+@media(max-width:600px){.gstats{grid-template-columns:repeat(2,1fr)}.ggrid{grid-template-columns:1fr}.filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.filters button{flex:0 0 auto}.gcard h3{font-size:21px}}
+@media(hover:none){.gcard{transform:none!important}}

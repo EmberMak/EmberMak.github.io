@@ -46,3 +46,6 @@ $$('.cert[data-cert]').forEach(card=>{const back=$('.back',card),src=card.datase
  const flip=kb=>{const on=card.classList.toggle('flipped');card.setAttribute('aria-pressed',on);card.style.transform='';if(!reduce){card.classList.remove('burst');void card.offsetWidth;card.classList.add('burst')}if(kb){const r=card.getBoundingClientRect();slashAt(r.left+r.width/2,r.top+r.height/2)}};
  card.addEventListener('click',()=>flip(false));
  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip(true)}})});
+
+// game filters
+$$('.filters button').forEach(b=>b.addEventListener('click',()=>{$$('.filters button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;$$('.gcard').forEach(c=>c.classList.toggle('hide',f!=='all'&&!c.dataset.f.split(' ').includes(f)))}));
