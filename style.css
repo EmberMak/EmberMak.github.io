@@ -130,3 +130,5 @@ footer{margin-top:120px;font-size:12px;color:#555b70}
 .cert.burst .face{animation:certglow .7s ease-out}
 @keyframes certglow{0%{box-shadow:0 0 0 0 #4de3ffaa,0 0 0 0 #ff4d6d88}60%{box-shadow:0 0 30px 8px #4de3ff55,0 0 60px 16px #ff4d6d33}100%{box-shadow:0 0 0 0 transparent}}
 @media(prefers-reduced-motion:reduce){.cert .flip{transition:none}.cert.burst .face{animation:none}}
+
+.games .game{display:flex;flex-direction:column;text-decoration:none;color:inherit;padding:0 0 26px;overflow:hidden}.games .game img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-bottom:20px;border-bottom:1px solid #ffffff14}.games .game>*:not(img){margin-left:26px;margin-right:26px}.games .go{margin-top:auto;padding-top:14px;color:var(--cyan);font-weight:700;font-size:14px}.games .game:hover .go{color:var(--neon)}

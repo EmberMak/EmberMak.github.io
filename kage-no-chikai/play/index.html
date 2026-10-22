@@ -1,0 +1,34 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0a0708"><link rel="icon" href="icon.svg"><link rel="manifest" href="manifest.webmanifest">
+<title>影ノ誓 KAGE NO CHIKAI — Oath of the Shadow · Book Two</title>
+<style>
+@font-face{font-family:'KageSerif';src:url(fonts/KageSerif-Regular.otf) format('opentype');font-weight:400;font-display:block}
+@font-face{font-family:'KageSerif';src:url(fonts/KageSerif-Bold.otf) format('opentype');font-weight:700;font-display:block}
+html,body{margin:0;height:100%;background:#0a0708;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;overscroll-behavior:none;-webkit-tap-highlight-color:transparent}
+canvas{display:block;width:100vw;height:100vh;height:100dvh}
+.ov{position:fixed;inset:0;display:none;align-items:stretch;justify-content:flex-end;z-index:5;touch-action:pan-y;font-family:'KageSerif','Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','Noto Serif CJK JP',serif;color:#2a1a12}
+#arm{background:linear-gradient(90deg,rgba(10,7,8,0) 0%,rgba(10,7,8,.55) 28%)}
+#armIn{width:min(72vw,900px);max-height:100vh;overflow:auto;background:linear-gradient(#ece0c8,#d2c0a0);padding:6px 10px 14px;box-sizing:border-box;font-size:11px;line-height:1.25;box-shadow:-6px 0 24px rgba(0,0,0,.5);border-left:3px solid #3a2416}
+#set{background:rgba(10,7,8,.6);justify-content:center;align-items:center}
+#setIn{width:min(92vw,560px);max-height:92vh;overflow:auto;background:linear-gradient(#ece0c8,#d2c0a0);padding:8px 14px 14px;box-sizing:border-box;font-size:12px;border:3px solid #3a2416;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.hd{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}.hd b{font-size:18px;letter-spacing:1px}.hd .mon{font-size:15px;font-weight:bold;color:#8a2a20}.hd .mon i{font-style:normal;font-size:11px}.hd .st{color:#6a4a32;font-size:10.5px}
+.hd button,#setX{margin-left:auto;background:#1a1010;color:#f3e6d0;border:0;border-left:4px solid #b8242a;padding:6px 14px;font:inherit;font-size:13px;letter-spacing:1px}
+.tabs{display:flex;gap:4px;margin:2px 0 4px}.tab{flex:1;background:rgba(40,25,15,.12);border:0;padding:6px;font:inherit;font-size:12px;font-weight:bold;color:#2a1a12;letter-spacing:1px}.tab.on{background:#1a1010;color:#f3e6d0;border-left:4px solid #b8242a}
+.sub{display:flex;gap:3px;flex-wrap:wrap;margin:0 0 6px}.sub button{background:rgba(40,25,15,.1);border:0;padding:4px 7px;font:inherit;font-size:10.5px;color:#2a1a12}.sub button.on{background:#b8242a;color:#f3e6d0}.sub button small{display:block;font-size:8.5px;opacity:.75}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:5px}
+.it{background:rgba(20,12,10,.9);color:#f3e6d0;padding:5px 7px;border:2px solid transparent;position:relative}.it .nm{font-size:12.5px}.it .nm b{font-size:13px}.it .sl{color:#ffd27a;font-size:9.5px;margin:2px 0}.it i{color:#cdb9a0;display:block;font-size:10px}.it .how{margin-top:3px;color:#d8c4ac;font-size:10px}.it .cmp{color:#9fe3a0;font-size:9.5px}
+.it.on{border-color:#b8242a}.it.lk{opacity:.55}.it.fine{border-left:3px solid #8aa0b8}.it.rare{border-left:3px solid #d9a640}.it.story{border-left:3px solid #b8242a}.it.plain{border-left:3px solid #6a6a6a}
+.it .eq{color:#ffd27a}.it .buy{color:#9fe3a0}.it .no{color:#c98a80}
+.row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(58,36,22,.2);flex-wrap:wrap}.row label{min-width:150px;font-weight:bold}.row label small{font-weight:normal;color:#6a4a32}.row.small{font-size:10px;color:#6a4a32}.row .rec{font-size:10.5px;color:#6a4a32}
+.seg{display:flex;gap:4px;flex-wrap:wrap}.seg button{background:rgba(40,25,15,.12);border:0;padding:5px 10px;font:inherit;font-size:11px;color:#2a1a12}.seg button.on{background:#1a1010;color:#f3e6d0}
+input[type=range]{flex:1;min-width:120px;accent-color:#b8242a}.danger{background:#b8242a;color:#f3e6d0;border:0;padding:5px 10px;font:inherit;font-size:11px}
+</style></head>
+<body><canvas id="c"></canvas>
+<div id="arm" class="ov"><div id="armIn"></div></div>
+<div id="set" class="ov"><div id="setIn"></div></div>
+<script src="guard.js"></script><script src="haptics.js"></script><script src="music.js"></script><script src="pix.js"></script><script src="fx.js"></script><script src="dialogue.js"></script><script src="chars.js"></script>
+<script src="game.js"></script><script src="story2.js"></script><script src="gear2.js"></script><script src="ui.js"></script>
+<script>if('serviceWorker' in navigator&&location.protocol.startsWith('http')&&!window.AndroidApp)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('16px KageSerif'),document.fonts.load('bold 16px KageSerif')]).catch(()=>{});}</script>
+</body></html>
