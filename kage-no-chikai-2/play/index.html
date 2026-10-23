@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a0708">
+<link rel="icon" href="icon.png">
+<title>影ノ誓・弐 — Kage no Chikai 2</title>
+<style>
+ html,body{margin:0;padding:0;background:#0a0708;overflow:hidden;width:100%;height:100%;position:fixed;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;overscroll-behavior:none}
+ canvas{position:fixed;left:0;top:0;display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+ #g{z-index:1}#x{z-index:2}
+ @font-face{font-family:'KageSerif';src:url('fonts/KageSerif-Regular.otf') format('opentype');font-weight:400;font-display:block}
+ @font-face{font-family:'KageSerif';src:url('fonts/KageSerif-Bold.otf') format('opentype');font-weight:700;font-display:block}
+ #boot{position:fixed;inset:0;z-index:3;background:#0a0708;color:#f3e6d0;font:14px 'KageSerif',serif;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;transition:opacity .6s}
+ #boot .t{font-size:34px;letter-spacing:.3em;font-weight:700}
+ #boot .s{font-size:11px;letter-spacing:.35em;opacity:.7}
+ #boot .bar{width:220px;height:3px;background:#2a1a1c}
+ #boot .bar i{display:block;height:100%;width:0;background:#b8242a;transition:width .2s}
+ #boot .m{font-size:11px;opacity:.6;letter-spacing:.1em;min-height:14px}
+</style>
+</head>
+<body>
+<canvas id="g"></canvas><canvas id="x"></canvas>
+<div id="boot"><div class="t">影ノ誓・弐</div><div class="s">KAGE NO CHIKAI 2</div><div class="bar"><i id="bootbar"></i></div><div class="m" id="bootmsg">drawing the land…</div></div>
+<script src="guard.js"></script>
+<script src="haptics.js"></script>
+<script src="pix.js"></script>
+<script src="fx.js"></script>
+<script src="dialogue.js"></script>
+<script src="core.js"></script>
+<script src="audio.js"></script>
+<script src="art.js"></script>
+<script src="world.js"></script>
+<script src="items.js"></script>
+<script src="chars.js"></script>
+<script src="entities.js"></script>
+<script src="duel.js"></script>
+<script src="duelfx.js"></script>
+<script src="exec.js"></script>
+<script src="story.js"></script>
+<script src="ui.js"></script>
+<script src="main.js"></script>
+<script src="kbd.js"></script>
+</body>
+</html>

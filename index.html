@@ -6,6 +6,14 @@
 <meta property="og:title" content="Kei Cheong Mai · Game &amp; Web Developer"><meta property="og:description" content="Small, fast games for Android and the web: duel games, action RPGs and more. Play them in your browser."><meta property="og:image" content="img/portrait-main.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Shippori+Mincho:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.ggrid .gcard.featured{grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;border-color:#ffc46b66;box-shadow:0 0 0 1px #ffc46b33,0 24px 70px -20px #ff4d6d77}
+.ggrid .gcard.featured .media{aspect-ratio:auto;min-height:100%}
+.ggrid .gcard.featured .body{justify-content:center;padding:34px}
+.ggrid .gcard.featured h3{font-size:32px}
+.ggrid .gcard.featured .badge.status{background:var(--neon,#ff4d6d);color:#07070d}
+@media(max-width:860px){.ggrid .gcard.featured{grid-template-columns:1fr}.ggrid .gcard.featured .media{aspect-ratio:16/9}.ggrid .gcard.featured h3{font-size:24px}}
+</style>
 </head><body>
 <canvas id="fx"></canvas>
 <div id="cursor"><span class="dot"></span><span class="ring"></span></div>
@@ -20,7 +28,7 @@
   <img class="portrait" src="img/portrait-main.jpg" alt="Kei Cheong Mai behind his camera">
   <p class="kicker pixel">Prologue · Singapore</p>
   <h1 class="glitch" data-text="KEI CHEONG MAI">KEI CHEONG MAI</h1>
-  <p class="lead">Game &amp; web developer based in Singapore.<br>I build small, fast games for Android and the web: duel games, action RPGs and more.</p>
+  <p class="lead">Game &amp; web developer based in Singapore.<br>I build small, fast games for Android and the web: duel games, action RPGs and open-world adventures, newest of all <a href="kage-no-chikai-2/" style="color:inherit">Kage no Chikai 2</a>.</p>
   <div class="cta"><a class="btn mag" href="#about">View profile</a><a class="btn ghost mag" href="#games">▶ Play my games</a><a class="btn ghost mag" href="#contact">Hire me</a></div>
  </div>
  <p class="hint">Scroll to explore</p>
@@ -35,7 +43,7 @@
    <p>On the web side, I added CSRF protection and data back-ups to a company reporting system during my IT internship at Kuai Da Trade. Through the Venture &amp; Tech Summer Program (VTSP) I worked on AI-driven investment models, company simulations and a competitor-strategy project.</p>
    <p>I served as <b>Student Council President</b> at Nan Hua High School and represented my school at the Student Leadership Convention 2023. I also work as a night and automotive photographer and hold a <b>1st Dan in iaido</b>.</p></div>
   <div class="stat-grid reveal">
-   <div class="stat tilt"><b data-count="5">0</b><span>Games built solo</span></div>
+   <div class="stat tilt"><b data-count="6">0</b><span>Games built solo</span></div>
    <div class="stat tilt"><b>Pres.</b><span>Student Council, 2023–24</span></div>
    <div class="stat tilt"><b data-count="7">0</b><span>Certifications</span></div>
    <div class="stat tilt"><b>1st Dan</b><span>Iaido (Shodan)</span></div>
@@ -45,9 +53,11 @@
 
 <section id="games" class="chapter">
  <div class="chap-head reveal"><span class="pixel">Game Select</span><h2>Play My <span class="bs">Games</span></h2><p>Small games, big feel. Experiments in story, combat and file size, most playable right in your browser.</p></div>
- <div class="gstats reveal"><div><b>5</b><span>Games</span></div><div><b>4</b><span>Playable now</span></div><div><b>~2 MB</b><span>Smallest APK</span></div><div><b>0</b><span>Installs needed</span></div></div>
+ <div class="gstats reveal"><div><b>6</b><span>Games</span></div><div><b>5</b><span>Playable now</span></div><div><b>~2 MB</b><span>Smallest APK</span></div><div><b>0</b><span>Installs needed</span></div></div>
  <div class="filters reveal" role="group" aria-label="Filter games"><button class="on" data-f="all">All</button><button data-f="web">Web</button><button data-f="android">Android</button><button data-f="pc">PC</button><button data-f="duel">Duel</button><button data-f="rpg">RPG</button><button data-f="adventure">Adventure</button><button data-f="unreal">Unreal</button></div>
  <div class="ggrid">
+  <article class="gcard tilt reveal featured" data-f="web android duel adventure rpg"><div class="media"><img src="kage-no-chikai-2/img/duel.jpg" alt="Kage no Chikai 2 duel on a snow road" loading="lazy"><span class="badge status">Newest · Favourite</span><span class="badge size">56 MB APK</span></div>
+   <div class="body"><span class="tag">Open-world samurai adventure × duel combat</span><h3>影ノ誓・弐 Kage no Chikai 2</h3><p>Open-world exploration meets arrow-parry duels. Walk 30 provinces of a pixel-art Japan with 106 towns and castles, face 34 bosses, each with his own synthesised theme, and finish duels with 48 executions, including the twelve iaidō kata. Play it in your browser with a keyboard or touch, or on Android.</p><div class="chips"><i>Web</i><i>Android</i><i>Open world</i><i>Duel</i><i>Keyboard</i><i>v1.3</i></div><div class="gbtns"><a class="btn sm" href="kage-no-chikai-2/play/?mode=pc">▶ Play on PC</a><a class="btn sm" href="kage-no-chikai-2/play/?mode=mobile">▶ Play on mobile</a><a class="btn sm ghost" href="kage-no-chikai-2/KageNoChikai2-v1.3.apk" download>⬇ Free APK</a><a class="btn sm ghost" href="kage-no-chikai-2/">Details</a></div></div></article>
   <article class="gcard tilt reveal" data-f="web android adventure"><div class="media"><img src="img/proj-ebbtide.jpg" alt="EBBTIDE key art" loading="lazy"><span class="badge status">Playable</span></div>
    <div class="body"><span class="tag">Open-world pixel adventure</span><h3>EBBTIDE</h3><p>A sea that drains away at every low tide. Sail by day, walk the drowned seabed at Ebb, five Warden bosses and three endings.</p><div class="chips"><i>Web</i><i>Android</i><i>Story</i></div><div class="gbtns"><a class="btn sm" href="new-game/">▶ Play now</a><a class="btn sm ghost" href="new-game/">Details</a></div></div></article>
   <article class="gcard tilt reveal" data-f="web android duel"><div class="media"><img src="img/proj-ashborn-2d.jpg" alt="ASHBORN 2D parry duel" loading="lazy"><span class="badge status">Playable</span><span class="badge size">~2 MB</span></div>
