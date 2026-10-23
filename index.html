@@ -28,7 +28,7 @@
 .flagship .fs-cta .btn.primary{font-size:16px;padding:14px 26px;box-shadow:0 0 0 1px #ffc46b,0 14px 40px -10px #ff4d6d}
 .flagship .fs-copy{margin-top:18px;font-size:12px;opacity:.6}
 @media(max-width:640px){.flagship:after{background:linear-gradient(0deg,#07070d 10%,#07070dd9 60%,#07070d99)}.flagship .fs-cta .btn{flex:1 1 calc(50% - 10px);text-align:center}.flagship .fs-cta .btn.primary{flex-basis:100%}}
-</style>
+.clickbox{cursor:pointer;transition:box-shadow .25s,filter .25s}.clickbox:hover{filter:brightness(1.06);box-shadow:0 0 0 1px #ffc46b88,0 18px 50px -18px #ffc46b66}.clickbox:focus-visible{outline:2px solid #ffc46b;outline-offset:3px}</style>
 </head><body>
 <canvas id="fx"></canvas>
 <div id="cursor"><span class="dot"></span><span class="ring"></span></div>
@@ -49,7 +49,7 @@
  <p class="hint">Scroll to explore</p>
 </header>
 
-<section id="flagship" class="flagship" aria-label="Flagship project: Kage no Chikai 2">
+<section id="flagship" class="flagship clickbox" data-href="kage-no-chikai-2/" tabindex="0" role="link" aria-label="Flagship project: Kage no Chikai 2">
  <div class="fs-bg" aria-hidden="true"></div>
  <div class="fs-inner reveal">
   <span class="fs-label pixel">&#9733; Flagship &middot; Mega project</span>
@@ -83,7 +83,7 @@
  <div class="gstats reveal"><div><b>6</b><span>Games</span></div><div><b>5</b><span>Playable now</span></div><div><b>~2 MB</b><span>Smallest APK</span></div><div><b>0</b><span>Installs needed</span></div></div>
  <div class="filters reveal" role="group" aria-label="Filter games"><button class="on" data-f="all">All</button><button data-f="web">Web</button><button data-f="android">Android</button><button data-f="pc">PC</button><button data-f="duel">Duel</button><button data-f="rpg">RPG</button><button data-f="adventure">Adventure</button><button data-f="unreal">Unreal</button></div>
  <div class="ggrid">
-  <article class="gcard tilt reveal featured" data-f="web android duel adventure rpg"><div class="media"><img src="kage-no-chikai-2/img/v13-duel-arrow.jpg" alt="Kage no Chikai 2 duel with the glowing parry arrow" loading="lazy"><span class="badge status">Newest · Favourite</span><span class="badge size">56 MB APK</span></div>
+  <article class="gcard tilt reveal featured clickbox" data-href="kage-no-chikai-2/" tabindex="0" role="link" aria-label="Kage no Chikai 2 showcase" data-f="web android duel adventure rpg"><div class="media"><img src="kage-no-chikai-2/img/v13-duel-arrow.jpg" alt="Kage no Chikai 2 duel with the glowing parry arrow" loading="lazy"><span class="badge status">Newest · Favourite</span><span class="badge size">56 MB APK</span></div>
    <div class="body"><span class="tag">Open-world samurai adventure × duel combat</span><h3>影ノ誓・弐 Kage no Chikai 2</h3><p>Open-world exploration meets arrow-parry duels. Walk 30 provinces of a pixel-art Japan with 106 towns and castles, face 34 bosses, each with his own synthesised theme, and finish duels with 48 executions, including the twelve iaidō kata. Play it in your browser with a keyboard or touch, or on Android.</p><div class="chips"><i>Web</i><i>Android</i><i>Windows</i><i>Open world</i><i>Duel</i><i>Keyboard</i><i>v1.3</i></div><div class="gbtns"><a class="btn sm" href="kage-no-chikai-2/play/?mode=pc">▶ Play on PC</a><a class="btn sm" href="kage-no-chikai-2/play/?mode=mobile">▶ Play on mobile</a><a class="btn sm ghost" href="kage-no-chikai-2/KageNoChikai2-v1.3.apk" download>⬇ Free APK</a><a class="btn sm ghost" href="kage-no-chikai-2/KageNoChikai2-v1.3-win64.zip" download>⬇ Windows</a><a class="btn sm ghost" href="kage-no-chikai-2/">Details</a></div></div></article>
   <article class="gcard tilt reveal" data-f="web android adventure"><div class="media"><img src="img/proj-ebbtide.jpg" alt="EBBTIDE key art" loading="lazy"><span class="badge status">Playable</span></div>
    <div class="body"><span class="tag">Open-world pixel adventure</span><h3>EBBTIDE</h3><p>A sea that drains away at every low tide. Sail by day, walk the drowned seabed at Ebb, five Warden bosses and three endings.</p><div class="chips"><i>Web</i><i>Android</i><i>Story</i></div><div class="gbtns"><a class="btn sm" href="new-game/">▶ Play now</a><a class="btn sm ghost" href="new-game/">Details</a></div></div></article>
@@ -203,4 +203,4 @@
 <button id="snd" aria-pressed="false" title="Toggle slash sound">🔇 Sound</button>
 <div id="lightbox"><img alt=""><p></p></div>
 <script src="main.js"></script>
-</body></html>
+<script>document.querySelectorAll(".clickbox[data-href]").forEach(function(b){function go(e){if(e.target.closest("a,button,input,select,textarea"))return;var s=window.getSelection&&String(window.getSelection());if(s&&e.type==="click")return;location.href=b.getAttribute("data-href")}b.addEventListener("click",go);b.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target===b){e.preventDefault();location.href=b.getAttribute("data-href")}})})</script></body></html>
