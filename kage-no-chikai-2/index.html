@@ -62,7 +62,7 @@ p{margin-bottom:16px}
 .todo{border:2px dashed #c8242c99;border-radius:6px;padding:34px;background:#c8242c0a}
 .todo .flag{display:inline-block;font:600 11px Inter;letter-spacing:.2em;background:#e8c27a;color:#1a0f08;padding:4px 10px;border-radius:2px;margin-bottom:14px}
 .ch{padding:24px 0;border-top:1px solid #ffffff14}.ch h3{font-size:24px;margin-bottom:6px}.ch .tech{font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--gold);border:1px solid #ffffff22;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px}
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
 .pcard{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:32px 28px;border:1px solid #ffffff18;border-radius:6px;background:linear-gradient(165deg,#1a0d10,#0d0809);color:var(--ink);text-decoration:none;transition:transform .3s,border-color .3s,box-shadow .3s}
 .pcard:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 20px 60px #c8242c44}
 .pcard .jp{position:absolute;right:16px;top:4px;font-size:84px;font-weight:800;color:#ffffff0b}
@@ -76,6 +76,8 @@ kbd{display:inline-block;padding:0 6px;border:1px solid #e8c27a88;border-bottom-
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}.chs{grid-template-columns:1fr}}
 .end{text-align:center}
 .note{margin:46px auto 0;max-width:820px;padding:26px 30px;border:1px dashed #c8242c88;border-radius:4px;text-align:left;background:#ffffff05;font-size:17px}
+@media (min-width:861px) and (max-width:1100px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+.own{opacity:.8;margin-top:12px}
 footer{text-align:center;padding:50px 6vw 70px;color:var(--dim);font:400 14px Inter;border-top:1px solid #ffffff10}footer a{margin:0 10px}
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}.rv.in{opacity:1;transform:none}
 @keyframes drift{to{transform:scale(1.12) translate(-2%,1%)}}@keyframes bob{50%{transform:translateY(6px)}}
@@ -92,12 +94,12 @@ footer{text-align:center;padding:50px 6vw 70px;color:var(--dim);font:400 14px In
 <h1>影ノ誓・<span class="two">弐</span></h1>
 <div class="en">Kage no Chikai 2 — The Shadow's Vow</div><div class="line"></div>
 <p class="tag">Walk all of Japan. Draw your blade on any road. Keep the vow.</p>
-<div class="cta"><a class="btn play" href="#play">▶ PLAY FREE NOW</a><a class="btn dl" href="KageNoChikai2-v1.3.apk" download>⬇ Free APK · 56 MB</a></div>
-<p class="small">Free · Play on PC (keyboard) or mobile in your browser, no install · APK for Android 7.0+ · v1.3</p>
+<div class="cta"><a class="btn play" href="#play">▶ PLAY FREE NOW</a><a class="btn dl" href="KageNoChikai2-v1.3.apk" download>⬇ Free APK · 56 MB</a><a class="btn dl" href="KageNoChikai2-v1.3-win64.zip" download>⬇ Windows 64-bit · 56 MB</a></div>
+<p class="small">Free to play · © Kei Cheong Mai · All rights reserved<br>Free · Play on PC (keyboard) or mobile in your browser, no install · APK for Android 7.0+ · v1.3</p>
 <div class="scroll">SCROLL</div></header>
 
 <section id="play"><div class="eyebrow rv">Choose your road</div><h2 class="rv">Play it right now. Free.</h2>
-<p class="rv" style="max-width:760px">Three ways in, same game. The web build is the full v1.3 game running in your browser, with the soundtrack streamed, your progress saved locally.</p>
+<p class="rv" style="max-width:760px">Four ways in, same game. The web build is the full v1.3 game running in your browser, with the soundtrack streamed, your progress saved locally.</p>
 <div class="pgrid">
  <a class="pcard rv" href="play/?mode=pc"><span class="jp">鍵</span><div class="pk">Web · Desktop</div><h3>Play on PC</h3>
   <p>Full keyboard support. The controls sheet opens when the game starts, and <kbd>?</kbd> brings it back any time.</p>
@@ -111,7 +113,11 @@ footer{text-align:center;padding:50px 6vw 70px;color:var(--dim);font:400 14px In
   <p>The native Android build with amplitude-controlled haptics for parries, hits and executions, plus offline play.</p>
   <ul><li>Free, no ads, no account</li><li>Android 7.0+ · landscape</li><li>Allow "install unknown apps" when asked</li></ul>
   <span class="go">⬇ DOWNLOAD FREE</span></a>
-</div></section>
+ <a class="pcard dlc rv" href="KageNoChikai2-v1.3-win64.zip" download><span class="jp">窓</span><div class="pk">Windows 10/11 · 64-bit · v1.3 · 56 MB</div><h3>Download for Windows (64-bit)</h3>
+  <p>The full game as a desktop app: keyboard controls, fullscreen with <kbd>F11</kbd>, offline play and local saves.</p>
+  <ul><li>Unzip the folder, then run <b>KageNoChikai2.exe</b></li><li>SmartScreen warning? "More info" › "Run anyway" (unsigned indie build)</li><li>Free, no ads, no account</li></ul>
+  <span class="go">⬇ DOWNLOAD FOR WINDOWS</span></a>
+</div><p class="small own">Free to play · © Kei Cheong Mai · All rights reserved</p></section>
 
 <section id="union">
 <div class="eyebrow rv">Why this game exists</div>
@@ -180,8 +186,8 @@ footer{text-align:center;padding:50px 6vw 70px;color:var(--dim);font:400 14px In
 
 <section class="end"><div class="eyebrow rv">Draw your blade</div><h2 class="rv">The road is open.</h2>
 <p class="rv" style="max-width:720px;margin:0 auto 10px">Play the full game right now in your browser on PC or mobile, or take the full game with you on Android. Both are free.</p>
-<div class="cta rv"><a class="btn play" href="play/?mode=pc">▶ PLAY ON PC</a><a class="btn play" href="play/?mode=mobile" style="animation:none">▶ PLAY ON MOBILE</a><a class="btn dl" href="KageNoChikai2-v1.3.apk" download>⬇ Free APK · 56 MB</a></div>
+<div class="cta rv"><a class="btn play" href="play/?mode=pc">▶ PLAY ON PC</a><a class="btn play" href="play/?mode=mobile" style="animation:none">▶ PLAY ON MOBILE</a><a class="btn dl" href="KageNoChikai2-v1.3.apk" download>⬇ Free APK · 56 MB</a><a class="btn dl" href="KageNoChikai2-v1.3-win64.zip" download>⬇ Windows 64-bit · 56 MB</a></div><p class="small own">Free to play · © Kei Cheong Mai · All rights reserved</p>
 <div class="note rv"><b>A passion project.</b> I make games solo, for the love of it. If you are curious about the source code or want to collaborate, I would love to hear from you on <a href="https://www.linkedin.com/in/kei-cheong-mai-2151913a4" target="_blank" rel="noopener">LinkedIn</a> or at <a href="mailto:maikeicheong@gmail.com?subject=Kage%20no%20Chikai%202">maikeicheong@gmail.com</a>. <a href="kage-no-chikai-2-showcase.pdf">Download the showcase PDF</a>.</div></section>
-<footer>Designed and built by Kei Cheong Mai · <a href="https://embermak.github.io/">Portfolio</a><a href="https://embermak.github.io/kage-no-chikai/">Kage no Chikai</a><a href="https://embermak.github.io/ashborn-2d/">ASHBORN</a></footer>
+<footer>© 2026 Kei Cheong Mai (EmberMak). All rights reserved. Designed and built by Kei Cheong Mai · <a href="https://embermak.github.io/">Portfolio</a><a href="https://embermak.github.io/kage-no-chikai/">Kage no Chikai</a><a href="https://embermak.github.io/ashborn-2d/">ASHBORN</a></footer>
 <script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(el=>io.observe(el));</script>
 </body></html>

@@ -36,7 +36,7 @@ L.innerHTML=`<div class="kl-box"><div class="kl-h">影 KEYBOARD CONTROLS <span>�
 <p>After a parry the foe is open — press any direction to strike (alternate for bonus).</p>
 <p><kbd>Space</kbd> / <kbd>J</kbd> hold to block 受</p><p><kbd>Q</kbd> step back 退 · <kbd>E</kbd> jump 跳 (red unblockables)</p>
 <p><kbd>F</kbd> Foxfire 狐 · <kbd>R</kbd> Kage-giri 奥</p><p><kbd>Enter</kbd> continue / take loot</p></div></div>
-<div class="kl-f">Mouse works too: click menus, drag to swipe. Press <kbd>?</kbd> any time to show this. <button id="klGo">START ▶</button></div></div>`;
+<div class="kl-f">Mouse works too: click menus, drag to swipe. Press <kbd>?</kbd> any time to show this · <kbd>F11</kbd> fullscreen. <button id="klGo">START ▶</button></div></div>`;
 const css=document.createElement('style');css.textContent=`#kbdLegend{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;background:rgba(6,4,5,.82);font:13px/1.45 'KageSerif',Georgia,serif;color:#f3e6d0}
 #kbdLegend.on{display:flex}.kl-box{max-width:760px;width:92%;border:1px solid #b8242a;background:linear-gradient(#160c0e,#0a0708);padding:18px 22px;box-shadow:0 0 40px #b8242a55}
 .kl-h{font-weight:700;letter-spacing:.2em;color:#e8c37a;margin-bottom:10px}.kl-h span{opacity:.6;letter-spacing:.05em;font-weight:400}
