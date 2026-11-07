@@ -31,6 +31,18 @@ button{font:inherit}
 #folio b{color:var(--butter);font-weight:700}
 #folio .bar{width:90px;height:3px;background:rgba(255,255,255,.25);border-radius:3px;overflow:hidden}
 #folio .bar i{display:block;height:100%;width:0;background:var(--pink);transition:width .4s}
+#soundtrack{position:fixed;left:14px;bottom:calc(54px + env(safe-area-inset-bottom,0px));z-index:940;width:min(300px,calc(100vw - 28px));background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--cherry);border-radius:4px;padding:10px 10px 8px;text-align:left}
+#soundtrack .who{font:700 10px/1 var(--ui);letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin:0}
+#soundtrack .name{margin:4px 0 8px;font-family:var(--display);font-size:1.15rem;line-height:1.1}
+#soundtrack .name span{display:block;font-family:var(--display);font-style:italic;font-size:.95rem;color:var(--ink-2)}
+#soundtrack .row{display:flex;align-items:center;gap:10px}
+#tuneplay{flex:none;border:2px solid var(--ink);background:var(--pink);color:#fff;border-radius:999px;padding:8px 14px;font:700 11px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+#tunetime{margin:6px 0 0;font:500 11px/1 var(--ui);letter-spacing:.08em;color:var(--ink-2)}
+#tune{display:none}
+.tune-cite{font:500 12px/1.55 var(--ui);letter-spacing:.04em;text-transform:none;color:var(--ink-2);max-width:46ch;margin:8px auto 0}
+@media (max-width:760px){
+  #soundtrack{left:10px;right:10px;width:auto;bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+}
 .issue{max-width:1040px;margin:0 auto;padding-block:22px 80px;display:flex;flex-direction:column;gap:26px;scroll-snap-type:y proximity}
 .pg{position:relative;background:var(--paper);border-radius:4px;padding:clamp(18px,4vw,54px);min-height:62svh;box-shadow:0 30px 60px rgba(90,40,60,.16),0 2px 0 #fff inset;scroll-snap-align:start;overflow:hidden;min-width:0}
 .pg::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.05),transparent 3%,transparent 97%,rgba(0,0,0,.04))}
@@ -238,7 +250,7 @@ figure.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px
 
 /* Editorial polish and scroll-linked heart passages. Decorative only. */
 html{overflow-x:clip}
-.issue{position:relative;z-index:2}
+.issue{position:relative;z-index:2;padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
 .pg{box-shadow:inset 7px 0 0 rgba(226,56,95,.07),0 1px 0 #fff inset,0 28px 60px rgba(90,40,60,.16),0 2px 0 rgba(90,40,60,.04)}
 .run span+span::before{content:"♥";color:var(--pink);font-size:8px;margin-right:8px;letter-spacing:0}
 .toc li a{background-image:linear-gradient(var(--pink),var(--pink));background-repeat:no-repeat;background-position:0 100%;background-size:0 1px;transition:background-size .35s ease}
@@ -580,10 +592,32 @@ Asked to expand, Dong Dong stared at a wall for forty minutes. Asked whether eig
   <p class="dek" style="text-align:center">Tap the heart for one last ripple, then go find the person who made this and say something nice to him.</p>
   <button class="btn tap" id="lastbtn">♥ one last ripple</button>
   <div class="colophon">Editor and photographer: KeiCheong · Cover: Haley, the rose wall · First columnist: Dong Dong · Set in Playfair Display, Cormorant Garamond and DM Sans · Issue 18 of ∞ · Singapore, 11 November 2026</div>
+  <p class="tune-cite">Olivia Rodrigo — u + me = &lt;3</p>
   <div><div class="barcode" style="margin:0 auto"></div><small class="credit">1 1 1 1 2 0 0 8 · 1 8</small></div>
 </section>
 
 </main>
+<aside id="soundtrack" aria-label="Soundtrack">
+  <p class="who">Haley's favourite</p>
+  <div class="row">
+    <button type="button" id="tuneplay" aria-pressed="false" aria-controls="tune">Play</button>
+    <p class="name">u + me = &lt;3<span>Olivia Rodrigo</span></p>
+  </div>
+  <p id="tunetime">0:00</p>
+  <audio id="tune" preload="metadata" src="haley-soundtrack.mp3"></audio>
+</aside>
+<script>
+(function(){
+  const audio=document.getElementById('tune'), btn=document.getElementById('tuneplay'), time=document.getElementById('tunetime');
+  const fmt=s=>{ if(!isFinite(s)) return '0:00'; const m=Math.floor(s/60), ss=Math.floor(s%60); return m+':'+(ss<10?'0':'')+ss; };
+  const label=()=>{ btn.textContent=audio.paused?'Play':'Pause'; btn.setAttribute('aria-pressed', audio.paused?'false':'true'); };
+  btn.addEventListener('click',()=>{ if(audio.paused) audio.play(); else audio.pause(); });
+  audio.addEventListener('play',label);
+  audio.addEventListener('pause',label);
+  audio.addEventListener('loadedmetadata',()=>{ time.textContent='0:00 / '+fmt(audio.duration); });
+  audio.addEventListener('timeupdate',()=>{ time.textContent=fmt(audio.currentTime)+' / '+fmt(audio.duration); });
+})();
+</script>
 
 <div id="lb" role="dialog" aria-label="Photo"><img id="lbimg" src="" alt=""><p id="lbcap"></p></div>
 
